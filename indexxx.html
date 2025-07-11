@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="google-site-verification" content="EAXCs_8hJpqu-v8LGHiCFMqkPmSuNaS0KAjg9Savb6w" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gurukul Academy Dashboard</title>
+  <style>
+    :root {
+      --primary: #4f46e5;
+      --secondary: #3b82f6;
+      --text: #1f2937;
+      --background: #f3f4f6;
+      --white: #ffffff;
+      --gray: #e5e7eb;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: var(--background);
+      color: var(--text);
+      display: flex;
+      min-height: 100vh;
+    }
+    aside {
+      background: var(--primary);
+      color: white;
+      width: 220px;
+      padding: 20px;
+      flex-shrink: 0;
+    }
+    aside h2 {
+      margin-bottom: 1rem;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+    aside button {
+      display: block;
+      width: 100%;
+      background: transparent;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      margin-bottom: 0.4rem;
+      text-align: left;
+      cursor: pointer;
+      transition: background 0.3s;
+      border-radius: 6px;
+    }
+    aside button:hover,
+    aside button.active {
+      background: var(--secondary);
+    }
+    main {
+      flex-grow: 1;
+      padding: 2rem;
+    }
+    .section {
+      display: none;
+      animation: fadeIn 0.4s ease-in-out;
+    }
+    .section.active {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .card {
+      background: var(--white);
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      max-width: 800px;
+      margin-bottom: 1.5rem;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--gray);
+      font-size: 0.9rem;
+      margin-top: 2rem;
+      border-radius: 8px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+      }
+      aside {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      aside h2 {
+        flex-basis: 100%;
+        margin-bottom: 0.5rem;
+      }
+      aside button {
+        flex: 1 1 45%;
+        margin: 0.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <aside>
+    <h2>Gurukul Academy</h2>
+    <button onclick="showSection('home')" class="active">Home</button>
+    <button onclick="showSection('homework')">Homework</button>
+    <button onclick="showSection('timetable')">Timetable</button>
+    <button onclick="showSection('attendance')">Attendance</button>
+    <button onclick="showSection('results')">Results</button>
+    <button onclick="showSection('notices')">Notices</button>
+    <button onclick="showSection('director')">Director's Thought</button>
+    <button onclick="showSection('contact')">Contact</button>
+  </aside>
+
+  <main>
+    <div id="home" class="section active">
+      <div class="card">
+        <h2>Welcome to Gurukul Academy</h2>
+        <p>This is your personalized dashboard. Explore homework, class schedules, attendance records, and more using the menu on the left.</p>
+      </div>
+    </div>
+
+    <div id="homework" class="section">
+      <div class="card">
+        <h2>Homework</h2>
+        <p>📘 English: Write a 200-word essay on "My School"</p>
+        <p>🔢 Math: Solve page 56 Q1–Q10</p>
+        <p>🔬 Science: Diagram of the human heart</p>
+      </div>
+    </div>
+
+    <div id="timetable" class="section">
+      <div class="card">
+        <h2>Timetable</h2>
+        <p>📅 Monday: English, Math, Science</p>
+        <p>📅 Tuesday: Hindi, SST, Computer</p>
+        <p>📅 Wednesday: Math, Science, Drawing</p>
+      </div>
+    </div>
+
+    <div id="attendance" class="section">
+      <div class="card">
+        <h2>Attendance</h2>
+        <p>Total Days: </p>
+        <p>Present: </p>
+        <p>Absent: </p>
+      </div>
+    </div>
+
+    <div id="results" class="section">
+      <div class="card">
+        <h2>Results</h2>
+        <p>English: </p>
+        <p>Math: </p>
+        <p>Science: </p>
+        <p>Social Studies: </p>
+      </div>
+    </div>
+
+    <div id="notices" class="section">
+      <div class="card">
+        <h2>Notices</h2>
+        <p> Addmission open from class nursery to 8th</p>
+        
+      </div>
+    </div>
+
+    <div id="director" class="section">
+      <div class="card">
+        <h2>Director’s Thought</h2>
+        <p><strong>Anita Rathor</strong>, Director</p>
+        <p>“At Gurukul Academy, we combine traditional values with modern education to nurture confident, responsible, and compassionate students.”</p>
+      </div>
+    </div>
+
+    <div id="contact" class="section">
+      <div class="card">
+        <h2>Contact Us</h2>
+        <p>📞 Mobile: <strong>9981452455,7898418933</strong></p>
+        <p>📍 Address: Gurukul Academy, Khadawada, MP</p>
+        <p>📧 Email: info@gurukulacademy.in</p>
+      </div>
+    </div>
+
+    <footer>
+      © 2025 Gurukul Academy | All Rights Reserved
+    </footer>
+  </main>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll("button").forEach(btn => btn.classList.remove("active"));
+      document.querySelectorAll(".section").forEach(sec => sec.classList.remove("active"));
+      document.getElementById(id).classList.add("active");
+      event.target.classList.add("active");
+    }
+  </script>
+</body>
+</html>
