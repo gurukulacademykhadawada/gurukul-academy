@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><meta name="google-site-verification" content="EAXCs_8hJpqu-v8LGHiCFMqkPmSuNaS0KAjg9Savb6w" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Gurukul Academy Dashboard</title>
   <style>
     :root {
-      --primary: #1e3a8a;
-      --secondary: #2563eb;
-      --text: #111827;
-      --background: #f9fafb;
+      --primary: #4f46e5;
+      --secondary: #3b82f6;
+      --text: #1f2937;
+      --background: #f3f4f6;
       --white: #ffffff;
       --gray: #e5e7eb;
     }
@@ -28,19 +28,18 @@
     aside {
       background: var(--primary);
       color: white;
-      width: 240px;
+      width: 220px;
       padding: 20px;
       flex-shrink: 0;
       text-align: center;
     }
     aside img {
       width: 100px;
-      height: auto;
-      margin-bottom: 1rem;
+      margin-bottom: 10px;
     }
     aside h2 {
-      font-size: 1.5rem;
       margin-bottom: 1rem;
+      font-size: 1.5rem;
     }
     aside button {
       display: block;
@@ -79,7 +78,7 @@
       padding: 1.5rem;
       border-radius: 12px;
       box-shadow: 0 4px 8px rgba(0,0,0,0.08);
-      max-width: 900px;
+      max-width: 800px;
       margin-bottom: 1.5rem;
     }
     footer {
@@ -90,6 +89,7 @@
       margin-top: 2rem;
       border-radius: 8px;
     }
+
     @media (max-width: 768px) {
       body {
         flex-direction: column;
@@ -117,13 +117,11 @@
     <img src="gurukul_logo.png" alt="Gurukul Academy Logo" />
     <h2>Gurukul Academy</h2>
     <button onclick="showSection('home')" class="active">Home</button>
-    <button onclick="showSection('vision')">Vision & Mission</button>
     <button onclick="showSection('homework')">Homework</button>
     <button onclick="showSection('timetable')">Timetable</button>
     <button onclick="showSection('attendance')">Attendance</button>
     <button onclick="showSection('results')">Results</button>
     <button onclick="showSection('notices')">Notices</button>
-    <button onclick="showSection('events')">Events</button>
     <button onclick="showSection('director')">Director's Thought</button>
     <button onclick="showSection('contact')">Contact</button>
   </aside>
@@ -132,15 +130,7 @@
     <div id="home" class="section active">
       <div class="card">
         <h2>Welcome to Gurukul Academy</h2>
-        <p>This is your personalized school dashboard. Access all important sections using the menu. Proudly educating students in Khadawada with values, discipline, and excellence.</p>
-      </div>
-    </div>
-
-    <div id="vision" class="section">
-      <div class="card">
-        <h2>Our Vision & Mission</h2>
-        <p><strong>Vision:</strong> To empower every child with education that blends traditional Indian values with modern excellence.</p>
-        <p><strong>Mission:</strong> To provide a supportive, play-based learning environment that nurtures curiosity, creativity, and lifelong learning.</p>
+        <p>This is your personalized dashboard. Explore homework, class schedules, attendance records, and more using the menu on the left.</p>
       </div>
     </div>
 
@@ -184,31 +174,33 @@
     <div id="notices" class="section">
       <div class="card">
         <h2>Notices</h2>
-        <p>📢 Admission open from class nursery to 8th.</p>
-      </div>
-    </div>
-
-    <div id="events" class="section">
-      <div class="card">
-        <h2>Events & Activities</h2>
-        <p>🎉 Independence Day Celebration - 15th August</p>
-        <p>🎨 Drawing & Craft Competition - 10th July</p>
-        <p>🏃‍♂️ Annual Sports Meet - 1st November</p>
+        <p> Addmission open from class nursery to 8th</p>
       </div>
     </div>
 
     <div id="director" class="section">
-      <div class="card">
-        <h2>Director’s Thought</h2>
-        <p><strong>Anita Rathor</strong>, Director</p>
-        <p>“At Gurukul Academy, we combine traditional values with modern education to nurture confident, responsible, and compassionate students.”</p>
-      </div>
-    </div>
+  <div class="card">
+    <h2>Director’s Thought</h2>
+    <p><strong>Anita Rathor</strong>, Director</p>
+    <p>
+      “At Gurukul Academy, we believe that true education is not just the memorization of facts, but the nurturing of wisdom, compassion, and courage. Our aim is to develop students who are academically accomplished, morally grounded, and socially responsible.
+    </p>
+    <p>
+      We blend traditional Indian values with modern teaching methodologies to create a holistic learning environment. We emphasize discipline, creativity, leadership, and empathy to prepare our students not only for exams, but for life.
+    </p>
+    <p>
+      Every child is unique and deserves a place where they feel inspired, respected, and challenged. At Gurukul Academy, we strive to offer that space — where young minds are ignited with curiosity, where learning is joyful, and where dreams begin to take flight.
+    </p>
+    <p>
+      Let us work together — parents, teachers, and students — to build a bright, strong, and compassionate generation for tomorrow.”
+    </p>
+  </div>
+</div>
 
     <div id="contact" class="section">
       <div class="card">
         <h2>Contact Us</h2>
-        <p>📞 Mobile: <strong>9981452455, 7898418933</strong></p>
+        <p>📞 Mobile: <strong>9981452455,7898418933</strong></p>
         <p>📍 Address: Gurukul Academy, Khadawada, MP</p>
         <p>📧 Email: info@gurukulacademy.in</p>
       </div>
